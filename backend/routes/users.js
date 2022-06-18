@@ -12,7 +12,7 @@ router.put('/:id', async (req, res) => {
         // $set でUserSchema内の情報を全て指定する
         $set: req.body,
       })
-      res.status(200).json('ユーザー情報が更新されました')
+      return res.status(200).json('ユーザー情報が更新されました')
     } catch (err) {
       return res.status(500).json(err)
     }
