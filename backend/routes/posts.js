@@ -94,7 +94,6 @@ router.get('/profile/:username', async (req, res) => {
     const posts = await Post.find({ userId: user._id })
 
     return res.status(200).json(posts)
-    // ...friendPosts　とスプレッド構文にしているのは、friendPostsが配列でデータを格納しておりその格納されているデータを一つずつ取り出すため
   } catch (err) {
     res.status(500).json(err)
   }
