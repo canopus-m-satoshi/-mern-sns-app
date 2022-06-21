@@ -115,7 +115,7 @@ router.get('/timeline/:userId', async (req, res) => {
     return res.status(200).json(userPosts.concat(...friendPosts)) // concat() ---> 2つ以上の配列を結合する
     // ...friendPosts　とスプレッド構文にしているのは、friendPostsが配列でデータを格納しておりその格納されているデータを一つずつ取り出すため
   } catch (err) {
-    res.status(500).json(err)
+    return res.json(500).json(err)
   }
 })
 
