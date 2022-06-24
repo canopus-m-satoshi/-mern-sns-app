@@ -1,8 +1,5 @@
-const User = require('../models/User')
-
 const router = require('express').Router()
-
-// CRUD
+const User = require('../models/User')
 
 // ユーザー情報の更新
 router.put('/:id', async (req, res) => {
